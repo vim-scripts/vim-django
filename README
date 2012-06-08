@@ -1,0 +1,12 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4095
+
+See: http://cwood.github.com/vim-django/
+
+This wraps the manage command and works better for vim and omnicomplete. I plan on actively adding features as I use it. This is still really early in development just trying to bring a small working version out.
+If there is a feature you would like vim to do with django feel free to make an issue on github or email me.
+
+
+
+I recommend installing through vundle/pathogen. 
+
+
