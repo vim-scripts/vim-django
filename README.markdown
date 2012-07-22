@@ -1,7 +1,11 @@
-Django Vim
+Vim-Django
 ===============================================================================
 
-Django vim wraps the manage.py and will allow vim to work with your project.
+Vim-Django is a vim script that helps manage a django app. It has wrapping's
+for the ``django-admin.py``, your projects ``manage.py`` and some helper 
+commands. It also has some quick ways to find templates, edit related files 
+in a app, create new apps, and help manage django while using Vim.
+
 
 Commands
 -------------------------------------------------------------------------------
@@ -26,13 +30,42 @@ apps, then run the ``django-admin.py`` to create the app there.
 Mappings
 -------------------------------------------------------------------------------
 
-TODO
+There are mappings for easily editing related django files while working on a
+app. They all can be changed if you dont like how they are currently mapped.
+There are mappins for (v|views), (u|urls), (a|admin),
+and (t|tests). If you want to remap these you can call the function
+``django#apps#edit('name_of_file.py', 'split')`` and it will open up
+the file it fineds in a split.
 
 
 Configuration
 -------------------------------------------------------------------------------
 
 ``g:django_projects`` is where your django projects are located.
+
+``g:django_activate_virtualenv`` when true will activate a virtualenv that
+starts with the same name. An example being. colinbits, is the site, and the
+virtuale env being colinbits.com.
+
+
+Custom Activation of Projects
+-------------------------------------------------------------------------------
+
+Since not everyone uses the default settings file vim-django will allow you to
+add a custom function to activate any project. In your vimrc you can define a
+function called ``ActivateProject`` it needs to accept one argument. From here
+you can have it activate the project.
+
+Working with other Scripts
+-------------------------------------------------------------------------------
+
+NERDTree:
+    ``g:django_activate_nerdtree`` when set to 1 will launch nerdtree when
+    activating the django project.
+
+VirtualEnv:
+    ``g:django_activate_virtualenv`` when set to 1 will activate the virtual
+    env that starts with the same name.
 
 
 Installing
